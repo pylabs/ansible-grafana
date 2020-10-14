@@ -1,0 +1,17 @@
+galaxy_info:
+  role_name: grafana
+  author: William Wu
+  description: Setup grafana server
+  company: PyLabs
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+  - name: Debian
+    versions:
+    - Buster
+    - 10
+  galaxy_tags:
+    - debian
+    - grafana
+dependencies:
+  - pylabs.sysbase
