@@ -3,5 +3,9 @@
   - name: install grafana
     apt:
       deb: "https://dl.grafana.com/oss/release/grafana_{{ grafana_version}}_amd64.deb"
+  - name: enable grafana server service
+    systemd:
+      name: "grafana-server.service"
+      enabled: yes
   tags:
     - grafana
