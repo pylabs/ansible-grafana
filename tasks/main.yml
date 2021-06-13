@@ -1,10 +1,10 @@
 ---
 - block:
   - name: install grafana
-    apt:
+    ansible.builtin.apt:
       deb: "https://dl.grafana.com/oss/release/grafana_{{ grafana_version}}_amd64.deb"
   - name: enable grafana server service
-    systemd:
+    ansible.builtin.systemd:
       name: "grafana-server.service"
       enabled: yes
       state: restarted
